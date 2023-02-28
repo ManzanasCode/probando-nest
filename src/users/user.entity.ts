@@ -4,7 +4,7 @@ import { Entity, Column, PrimaryGeneratedColumn  } from 'typeorm'
 export class User{
 
     @PrimaryGeneratedColumn()
-    id: Number
+    id: number
 
     @Column({ unique: true })
     username: string
@@ -15,7 +15,7 @@ export class User{
     @Column({ type: 'datetime', default: ()=> 'CURRENT_TIMESTAMP' })
     createdAt: Date
 
-    @Column()
+    @Column({nullable: true})
     rol: string
     
 
