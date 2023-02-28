@@ -7,6 +7,15 @@ enum Sports {
     Hockey = "Hky"
 }
 
+enum Countrys {
+    Mexico = "mx",
+    Spain = "sp",
+    England = "en",
+    Italy = "it",
+    UnitedStates = "us",
+    Brazil = "bz"
+}
+
 
 export interface League {
     id: string;
@@ -16,9 +25,17 @@ export interface League {
     type: Sports.Football;
 }
 
+export interface Season{
+    id: string;
+    dateStart: Date;
+    dateEnd: Date;
+    teamsAtSeason: TeamLeague[];
+}
+
 export interface TeamLeague{
     id: string;
     name: string;
     country: string;
     aliasDsiplay: string;
+    urlImg: string;
 }

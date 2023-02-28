@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module'
+import { FootballController } from './football/football.controller';
+import { FootballService } from './football/football.service';
 
 
 //mysql://root:mysqlpw@localhost:55000;
@@ -20,8 +22,8 @@ import { UsersModule } from './users/users.module'
     }),
     UsersModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, FootballController],
+  providers: [AppService, FootballService],
 })
 export class AppModule {
   
